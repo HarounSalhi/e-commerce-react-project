@@ -10,7 +10,7 @@ const userRoutes = require('./routes/user');
 
 const path = require('path');
 
-mongoose.connect('mongodb+srv://haroun:haroun1998@cluster0.frdpj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://haroun:connect@cluster0.frdpj.mongodb.net/Cluster0?retryWrites=true&w=majority',
 { useNewUrlParser: true,
   useUnifiedTopology: true })
     .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -55,8 +55,8 @@ mongoose.connect('mongodb+srv://haroun:haroun1998@cluster0.frdpj.mongodb.net/myF
   
   router.use(bodyParser.json());
   
-  app.use('/images', express.static(path.join(__dirname, 'images')));
-  app.use('/api/stuff', stuffRoutes);
-  app.use('/api/auth', userRoutes);
+  //app.use('/images', express.static(path.join(__dirname, 'images')));
+  //app.use('/api/stuff', stuffRoutes);
+  //app.use('/api/auth', userRoutes);
   
   module.exports = router;
