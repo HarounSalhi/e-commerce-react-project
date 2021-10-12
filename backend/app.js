@@ -5,17 +5,17 @@ const mongoose = require('mongoose');
 const Thing = require('./models/things');
 
 
-const stuffRoutes = require('./routes/stuff');
-const userRoutes = require('./routes/user');
-
-const path = require('path');
-
 mongoose.connect('mongodb+srv://haroun:connect@cluster0.frdpj.mongodb.net/Cluster0?retryWrites=true&w=majority',
 { useNewUrlParser: true,
   useUnifiedTopology: true })
-    .then(() => console.log('Connexion à MongoDB réussie !'))
-    .catch(() => console.log('Connexion à MongoDB échouée !'));
-
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
+  
+  
+  const stuffRoutes = require('./routes/stuff');
+  const userRoutes = require('./routes/user');
+  
+  const path = require('path');
     
     
     
